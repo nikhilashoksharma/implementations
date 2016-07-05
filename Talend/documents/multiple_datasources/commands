@@ -1,0 +1,12 @@
+Following is a description on how to install one or more datasources on Karaf:
+
+Form the Karaf console execute:
+feature:install jdbc
+install -s mvn:mysql/mysql-connector-java/5.1.18
+install -s mvn:commons-dbcp/commons-dbcp/1.4
+
+Edit the file <ESB RUNTIME PATH>/add-ons/datasources/dataservice/datasource-mysql.xml and copy it into <ESB RUNTIME PATH>/container/deploy
+
+Check the Karaf console and log file that the datasource has been deployed correctly.
+
+Attached is an example datasource file.
